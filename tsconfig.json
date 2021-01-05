@@ -1,0 +1,32 @@
+{
+  "ts-node": {
+    "transpileOnly": true,
+    "compilerOptions": {
+      "module": "commonjs",
+      "sourceMap": true,
+    },
+    "include": [
+      "test/**/*"
+    ]
+  },
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "declaration": true,
+    "declarationDir": "types",
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitThis": true,
+  },
+  "include": [
+    "@types/**/*",
+    "src/**/*"
+, "test/add.spec.ts"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

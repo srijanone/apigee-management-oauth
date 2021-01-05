@@ -1,0 +1,11 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "Babel Javascript",
+    "typescript",
+  ],
+  "eslint.alwaysShowStatus": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+}
