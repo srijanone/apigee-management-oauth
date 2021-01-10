@@ -4,22 +4,23 @@ import { terser } from "rollup-plugin-terser";
 import pkg from "./package.json";
 
 export default {
+  inlineDynamicImports: true,
   input: "src/index.ts",
   output: [
     {
       format: "esm",
-      file: pkg.module,
+      dir: "dist",
       sourcemap: false,
     },
     {
       format: "cjs",
-      file: pkg.main,
+      dir: "dist",
       sourcemap: false,
     },
     {
       name: pkg["umd:name"] || pkg.name,
       format: "umd",
-      file: pkg.unpkg,
+      dir: "dist",
       sourcemap: false,
       plugins: [terser()],
     },
