@@ -47,4 +47,30 @@ export default class AuthService {
       }
     });
   }
+
+  refreshAccessToken(refreshToken: string): Promise<IAccessToken | IError> {
+    const formData: string = qs.stringify({
+      refresh_token: refreshToken,
+      grant_type: "refresh_token",
+    });
+
+    return new Promise(async (resolve, reject) => {
+      try {
+        const response = await this.axios.post("/token", formData);
+        const data = response.data;
+
+        resolve({
+          accessToken: data.access_token,
+          expiresIn: data.expires_in,
+          refreshToken: data.refresh_token,
+        });
+      } catch (error) {
+        error = error.response.data;
+        reject({
+          error: error.error,
+          message: error.error_description,
+        });
+      }
+    });
+  }
 }

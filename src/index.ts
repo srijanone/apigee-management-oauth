@@ -10,4 +10,10 @@ export default class Apigee {
   public async getAccessToken(): Promise<IAccessToken | IError> {
     return this.apigee.getAccessToken();
   }
+
+  public async refreshAccessToken(
+    refreshToken: string
+  ): Promise<IAccessToken | IError> {
+    return this.apigee.refreshAccessToken(refreshToken);
+  }
 }
