@@ -7,14 +7,23 @@ export default class AuthService {
   private password: string;
   private axios: AxiosInstance;
 
-  constructor(username: string, password: string) {
+  constructor(
+    username: string,
+    password: string,
+    oauthUsername: string,
+    oauthPassword: string
+  ) {
     this.username = username;
     this.password = password;
+    const authHeader = Buffer.from(
+      `${oauthUsername}:${oauthPassword}`,
+      "utf-8"
+    ).toString("base64");
 
     this.axios = axios.create({
       baseURL: "https://login.apigee.com/oauth",
       headers: {
-        Authorization: "Basic ZWRnZWNsaTplZGdlY2xpc2VjcmV0",
+        Authorization: `Basic ${authHeader}`,
         Accept: "application/json;charset=utf-8",
         "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
       },
@@ -40,6 +49,7 @@ export default class AuthService {
         });
       } catch (error) {
         error = error.response.data;
+
         reject({
           error: error.error,
           message: error.error_description,
@@ -66,6 +76,7 @@ export default class AuthService {
         });
       } catch (error) {
         error = error.response.data;
+
         reject({
           error: error.error,
           message: error.error_description,

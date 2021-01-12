@@ -1,5 +1,11 @@
 const Apigee = require("../../dist/index");
 const apigee = new Apigee("username", "password");
+// const apigee = new Apigee(
+//   "username",
+//   "password",
+//   "oauthusername",
+//   "oauthusername"
+// );
 
 apigee
   .getAccessToken()
