@@ -10,22 +10,25 @@
     ]
   },
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "target": "ES2015",
+    "module": "ESNext",
+    "esModuleInterop": true,
     "declaration": true,
-    "declarationDir": "types",
+    "declarationDir": "dist",
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "strictNullChecks": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "noImplicitThis": true,
   },
   "include": [
     "@types/**/*",
-    "src/**/*"
-, "test/add.spec.ts"  ],
+    "src/**/*",
+  ],
   "exclude": [
     "node_modules"
   ]
