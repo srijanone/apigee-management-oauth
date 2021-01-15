@@ -7,12 +7,14 @@ export default class Apigee {
   constructor(
     username: string,
     password: string,
+    loginUrl = "https://login.apigee.com/oauth",
     oauthUsername = "edgecli",
     oauthPassword = "edgeclisecret"
   ) {
     this.apigee = new AuthService(
       username,
       password,
+      loginUrl,
       oauthUsername,
       oauthPassword
     );

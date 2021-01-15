@@ -5,23 +5,26 @@ import { IAccessToken, IError } from "./auth.interface";
 export default class AuthService {
   private username: string;
   private password: string;
+  private loginUrl: string;
   private axios: AxiosInstance;
 
   constructor(
     username: string,
     password: string,
+    loginUrl: string,
     oauthUsername: string,
     oauthPassword: string
   ) {
     this.username = username;
     this.password = password;
+    this.loginUrl = loginUrl;
     const authHeader = Buffer.from(
       `${oauthUsername}:${oauthPassword}`,
       "utf-8"
     ).toString("base64");
 
     this.axios = axios.create({
-      baseURL: "https://login.apigee.com/oauth",
+      baseURL: this.loginUrl,
       headers: {
         Authorization: `Basic ${authHeader}`,
         Accept: "application/json;charset=utf-8",
