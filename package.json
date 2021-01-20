@@ -1,6 +1,6 @@
 {
-  "name": "apigee-node-sdk",
-  "description": "Apigee Management API Node.js SDK",
+  "name": "apigee-management-oauth",
+  "description": "Apigee Management API Oauth module",
   "version": "0.0.0-development",
   "license": "MIT",
   "author": {
@@ -8,10 +8,10 @@
     "email": "sikender.khan@srijan.net",
     "url": "https://www.srijan.net"
   },
-  "homepage": "https://github.com/srijanone/apigee-node-sdk",
-  "repository": "https://github.com/srijanone/apigee-node-sdk",
+  "homepage": "https://github.com/srijanone/apigee-management-oauth",
+  "repository": "https://github.com/srijanone/apigee-management-oauth",
   "bugs": {
-    "url": "https://github.com/srijanone/apigee-node-sdk/issues"
+    "url": "https://github.com/srijanone/apigee-management-oauth/issues"
   },
   "engines": {
     "node": ">= 10"
@@ -63,7 +63,7 @@
     "SDK"
   ],
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "dependencies": {
     "axios": "0.21.1"
