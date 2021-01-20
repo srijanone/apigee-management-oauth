@@ -1,7 +1,7 @@
 {
   "name": "@srijanone/apigee-management-oauth",
   "description": "Apigee Management API Oauth module",
-  "version": "0.0.0-development",
+  "version": "0.0.3",
   "license": "MIT",
   "author": {
     "name": "Srijan Technologies",
@@ -37,7 +37,7 @@
   },
   "scripts": {
     "dev": "rollup -c",
-    "build": "npm run lint && npm run test && rollup -c",
+    "build": "npm run lint && rollup -c",
     "lint": "eslint --fix",
     "test": "jest",
     "coverage": "jest --coverage"
