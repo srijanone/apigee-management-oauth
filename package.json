@@ -1,7 +1,7 @@
 {
   "name": "@srijanone/apigee-management-oauth",
   "description": "Apigee Management API Oauth module",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "license": "MIT",
   "author": {
     "name": "Srijan Technologies",
