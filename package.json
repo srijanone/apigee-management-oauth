@@ -1,5 +1,5 @@
 {
-  "name": "apigee-management-oauth",
+  "name": "@srijanone/apigee-management-oauth",
   "description": "Apigee Management API Oauth module",
   "version": "0.0.0-development",
   "license": "MIT",
