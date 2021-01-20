@@ -7,13 +7,13 @@
 With [npm](https://npmjs.org/) installed, run
 
 ```
-$ npm install apigee-node-sdk
+$ npm install @srijanone/apigee-management-oauth
 ```
 
 ## Usage
 
 ```js
-const Apigee = require("");
+const Apigee = require("@srijanone/apigee-management-oauth");
 const apigee = new Apigee("username", "password");
 
 apigee
