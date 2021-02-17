@@ -202,3 +202,5 @@ $RECYCLE.BIN/
 
 # and uncomment the following lines
 # .pnp.*
+
+.vscode
